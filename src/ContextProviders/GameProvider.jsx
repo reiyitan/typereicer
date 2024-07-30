@@ -76,11 +76,14 @@ export const GameProvider = ({children}) => {
 
     const fetchWords = () => {
         setCurrWordIndex(0);
-        fetch(`http://localhost:4000/words/get_words?num_words=${numWords}`)
+        fetch("https://ztfgb6pg6ltkhoewhw7ntoh3w40iwcki.lambda-url.us-east-2.on.aws/", {
+            method: "POST",
+            body: JSON.stringify({numWords: numWords})
+        })
         .then(res => res.json())
-        .then(data => {
-            setWords(data.words);
-            setTypedWords(new Array(data.words.length).fill(""));
+        .then(newWords => {
+            setWords(newWords);
+            setTypedWords(new Array(newWords.length).fill(""));
             setCurrWordIndex(0); 
             setCurrCharIndex(0); 
             setPrevCharRef(null);
