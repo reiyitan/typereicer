@@ -1,0 +1,37 @@
+.textform-container {
+    position: relative;
+}
+
+.textform-label {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    padding-left: 0;
+}
+
+.textform {
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--clr-txt-primary);
+    padding-bottom: 5px;
+    color: var(--clr-txt-primary);
+    font-size: var(--fontsize-med);
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: Montserrat;
+}
+
+.passicon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 3px;
+    color: var(--clr-txt-primary);
+    top: 27px;
+    transition: color 0.3s ease;
+}
+
+.passicon:hover {
+    color: var(--clr-txt-primary-hover);
+}

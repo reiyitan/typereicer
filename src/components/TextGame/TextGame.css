@@ -1,0 +1,232 @@
+#game-container {
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+    width: 800px;
+}
+
+#game-topbar {
+    position: relative; 
+    height: 50px;
+    margin-bottom: 25px;
+}
+#game-controls {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100px;
+    background-color: var(--clr-bg-lt);
+    border-radius: 5px;
+}
+
+.word-count-button {
+    position: absolute;
+    background-color: var(--clr-bg-lt);
+    border: none;
+    width: 50%;
+    height: 100%;
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+    color: var(--clr-txt-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.word-count-button:hover {
+    background-color: var(--clr-bg-lt-hover);
+    color: var(--clr-txt-primary-hover);
+}
+
+.word-count-button-25 {
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.word-count-button-active {
+    color: var(--clr-highlight);
+    background-color: var(--clr-bg-lt-hover);
+}
+
+.word-count-button-active:hover {
+    color: var(--clr-highlight);
+    background-color: var(--clr-bg-lt-hover);
+}
+
+
+.word-count-button-50 {
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#timer-container {
+    position: absolute; 
+    right: 0;
+    top: 0;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: var(--clr-bg-lt);
+}
+
+#timer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-txt-primary);
+    font-family: "Inconsolata", monospace;
+}
+
+#words-div {
+    position: relative;
+    display: inline-block;
+    background-color: var(--clr-bg-lt);
+    border-radius: 5px; 
+    width: 100%;
+    max-height: 400px;
+    padding: 25px 50px 25px 50px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    font-variant-ligatures: none;
+    font-family: "Inconsolata", monospace;
+}
+
+#words-div-overlay {
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(25, 25, 25, 0.3);
+    transition: backdrop-filter 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
+    z-index: 2;
+}
+
+#words-div-overlay:hover {
+    backdrop-filter: blur(0px);
+    background-color: none;
+}
+
+#focus-message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+#words-div-overlay:hover #focus-message {
+    opacity: 0;
+}
+
+#loading-words-div {
+    position: relative; 
+    width: 100%;
+    height: 100px;
+}
+
+#loading-words-msg {
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+}
+
+#results-div {
+    position: relative; 
+    width: 100%;
+}
+
+.results-category {
+    font-family: Montserrat;
+    font-weight: 550;
+    font-size: 25px;
+    color: var(--clr-txt-primary);
+    margin: 10px 0 0 0;
+}
+
+.results-value {
+    font-family: Montserrat;
+    font-size: 50px;
+    color: var(--clr-highlight);
+    margin: 0 0 20px 0;
+}
+
+#invalid-test-msg {
+    font-family: Montserrat; 
+    color: var(--clr-game-incorrect);
+}
+
+#refresh-button {
+    position: relative;
+    margin: 15px 0 0 0;
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--clr-bg-lt);
+    transition: background-color ease 0.3s;
+}
+
+#refresh-button:hover {
+    background-color: var(--clr-bg-lt-hover);
+}
+
+#refresh-icon {
+    color: var(--clr-highlight);
+    width: 20px;
+    height: 20px;
+}
+
+.word {
+    margin-right: 15px;
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+.unattempted {
+    color: var(--clr-game-unattempted);
+}
+
+.correct {
+    color: var(--clr-game-correct); 
+}
+
+.incorrect {
+    color: var(--clr-game-incorrect);
+}
+
+.extra {
+    color: var(--clr-game-extra);
+}
+
+.cursor {
+    position: absolute;
+    width: 3px;
+    height: 28px;
+    background-color: var(--clr-highlight);
+    transition: left 0.1s ease;
+    border-radius: 1px;
+    z-index: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#game-input {
+    position: absolute;
+    opacity: 0;
+}

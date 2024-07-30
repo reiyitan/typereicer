@@ -1,0 +1,135 @@
+#profile-panel {
+    position: absolute;
+    left: 50%;
+    top: 250px;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 500px;
+    background-color: var(--clr-bg-lt);
+    border-radius: 5px;
+}
+
+#loading-profile-msg {
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+}
+
+#profile-header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 1px var(--clr-txt-primary-hover);
+    height: 64.5px;
+}
+
+#profile-header {
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+    font-weight: 550;
+    font-size: 25px;
+}
+
+#profile-info-container {
+    height: 435.5px;
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+#profile-stats {
+    border-right: solid var(--clr-txt-primary);
+    border-width: 1px;
+}
+
+.profile-stat-container {
+    display: grid;
+    grid-template-columns: 62.5% 37.5%;
+    width: 100%;
+}
+
+.profile-info-category {
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.profile-info-stat {
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+    font-size: 15px;
+}
+
+#profile-rank {
+    position: relative;
+}
+
+#profile-rank-img-title {
+    position: absolute;
+    top: 20px;
+    font-family: Montserrat;
+    color: var(--clr-txt-primary);
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#profile-rank-img {
+    border-radius: 5px;
+}
+
+.tooltip-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.tooltip {
+    position: absolute;
+    font-family: Montserrat; 
+    color: var(--clr-txt-primary);
+    transition: opacity ease 0.5s;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 13px;
+    text-align: center;
+    width: 200px;
+    z-index: 1;
+}
+.tooltip-hidden {
+    opacity: 0;
+}
+
+.tooltip-visible {
+    opacity: 1;
+}
+
+
+#sign-out-button {
+    position: relative;
+    background-color: var(--clr-txt-red);
+    border: none;
+    border-radius: 5px;
+    font-family: Montserrat;
+    margin-top: 20px;
+    height: 35px;
+    width: 100%;
+    color: var(--clr-txt-primary);
+    font-size: 15px;
+    transition: background-color ease 0.3s, color ease 0.3s;
+    z-index: 0;
+}
+
+#sign-out-button:hover {
+    background-color: var(--clr-txt-red-hover); 
+    color: var(--clr-txt-primary-hover);
+}
