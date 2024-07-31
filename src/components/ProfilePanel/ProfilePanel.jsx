@@ -106,7 +106,7 @@ export const ProfilePanel = () => {
                 </div>
             </div>
             <div id="sign-out-button-container">
-                <button id="sign-out-button" onClick={() => signout()}>Sign out</button>
+                <button id="sign-out-button" className="shadow" onClick={() => signout()}>Sign out</button>
             </div>
         </div>
     );
