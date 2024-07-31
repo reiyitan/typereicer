@@ -212,7 +212,7 @@ export const FirebaseProvider = ({ children }) => {
 
     const get_overall_top10 = async () => {
         const usersRef = collection(db, "users"); 
-        const q = query(usersRef, where("total_completed", ">", 4), orderBy("average_overall_wpm", "desc"), limit(10));
+        const q = query(usersRef, where("total_25_completed", ">", 4), where("total_50_completed", ">", 4), orderBy("average_overall_wpm", "desc"), limit(10));
         const qSnapshot = await getDocs(q); 
         let res = []; 
         qSnapshot.forEach((doc) => {
